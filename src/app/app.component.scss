@@ -1,0 +1,16 @@
+.home {
+    background-color: #f9f9f9;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+
+    &__heroes {
+        display: grid;
+        gap: 50px;            
+        @media(min-width: 640px) {
+            grid-template-columns: auto auto;
+        }
+    }
+}

@@ -1,0 +1,32 @@
+<div class="heroes">
+  <h1 class="heroes__title"> Top Heroes </h1>
+  <div class="heroes__card">
+
+    <div class="card" *ngFor="let hero of heroes"
+    [class.selected]="hero === selectedHero"
+    (click)="onSelect(hero)">
+      <div class="card__image">
+        <img src="../../assets/img/heroes/{{hero.image}}" alt="heroes">
+      </div>
+      <div class="card__content">
+        <h3> {{hero.name}} </h3>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. A rerum facere impedit aliquid, vitae minus!</p>
+      </div>
+    </div>
+
+
+    <div *ngIf="selectedHero">
+
+        <h2>{{selectedHero.name | uppercase}} Details</h2>
+        <div><span>id: </span>{{selectedHero.id}}</div>
+        <div>
+          <label for="hero-name">Hero name: </label>
+          <input id="hero-name" [(ngModel)]="selectedHero.name" placeholder="name">
+        </div>
+      
+    </div>
+    
+   
+  </div>
+
+</div>

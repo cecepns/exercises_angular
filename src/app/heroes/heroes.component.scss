@@ -1,0 +1,60 @@
+.heroes {
+  border: 1px solid #eaeaea;
+  min-height: 400px;
+  min-width: 300px;
+  border-radius: 8px;
+  padding: 30px;
+
+  &__title {
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  &__card {
+      display: grid;
+      gap: 30px 20px;
+    
+    @media(min-width: 640px) {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    
+    @media(min-width: 768px) {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+    
+    .card {
+        transition: all .3s ease-in-out;
+      &__image {
+        min-height: 140px;
+        display: flex;
+        align-items: flex-end;
+      }
+
+      &__content {
+        padding: 15px;
+        box-shadow: 0 26px 32px rgb(26 36 72 / 5%);
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+
+
+        p {
+          font-size: 14px;
+          line-height: 23px;
+          letter-spacing: .5px;
+          color: #333d47;
+          display: flex;
+          flex: 1 1;
+        }
+      }
+
+
+      &:hover {
+        transform: translateY(-15px);
+      }
+
+    }
+  }
+
+}

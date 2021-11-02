@@ -1,1 +1,25 @@
-/* You can add global styles to this file, and also import other style files */
+*,::after, ::before {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: roboto;
+}
+
+img {
+    max-width: 100%;
+}
+
+.app-container {
+    max-width: calc(1140px + 4rem);
+    margin: 0 auto;
+    padding: 1rem;
+    @media (min-width: 1024px) {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+    @media (max-width: 640px) {
+        padding: 0 1.5rem;
+    }
+}
