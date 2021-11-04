@@ -2,9 +2,10 @@
   <h1 class="heroes__title"> Top Heroes </h1>
   <div class="heroes__card">
 
-    <div class="card" *ngFor="let hero of heroes"
-    [class.selected]="hero === selectedHero"
-    (click)="onSelect(hero)">
+    <div class="card" 
+        *ngFor="let hero of heroes"
+        [class.selected]="hero === selectedHero"
+        (click)="onSelect(hero)">
       <div class="card__image">
         <img src="../../assets/img/heroes/{{hero.image}}" alt="heroes">
       </div>
